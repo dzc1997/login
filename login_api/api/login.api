@@ -1,0 +1,31 @@
+syntax = "v1"
+
+type (
+	LoginReq {
+		Name     string `json:"name"`
+		Password string `json:"password"`
+	}
+	LoginResp {
+		Flag bool `json:"flag"`
+	}
+)
+
+type (
+	RegisterReq {
+		Name     string `json:"name"`
+		Password string `json:"password"`
+	}
+	RegisterResp {
+		Flag bool `json:"flag"`
+	}
+)
+
+service user-api {
+	@doc "注册"
+	@handler register
+	post /register (RegisterReq) returns (RegisterResp)
+
+	@doc "登录"
+	@handler login
+	get /login (LoginReq) returns (LoginResp)
+}

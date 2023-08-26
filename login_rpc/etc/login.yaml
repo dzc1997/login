@@ -1,0 +1,5 @@
+Name: login.rpc
+ListenOn: 0.0.0.0:8080
+
+MySQL:
+  DataSource: root:19971002@tcp(localhost:3306)/user_info?charset=utf8mb4&parseTime=True&loc=Local

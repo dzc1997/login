@@ -1,0 +1,7 @@
+Name: user-api
+Host: 127.0.0.1
+Port: 8889
+
+UserRpcConf:
+  Endpoints:
+    - 127.0.0.1:8080
